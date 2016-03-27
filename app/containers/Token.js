@@ -18,7 +18,7 @@ class Token extends Component {
         nonce     ,
         signature
       } = this.props.location.query;
-    let token     = "xieyihao";
+    let token     = "weixin";
     let array = [timestamp,nonce,token].sort();
     let tempstr = array.join("");
     tempstr = sha1(tempstr);
@@ -27,7 +27,7 @@ class Token extends Component {
     }else{
       console.log("different");
     }
-    debugger;
+    // debugger;
   }
 
   // 在初始化渲染执行之后立刻调用一次，仅客户端有效（服务器端不会调用）。
